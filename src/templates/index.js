@@ -21,6 +21,7 @@ const Index = ({ data, pageContext }) => {
       {!isFirstPage && (
         <Helmet>
           <title>{`${config.siteTitle} - Page ${currentPage}`}</title>
+          <script src="https://cdn.embedly.com/widgets/platform.js" type="text/javascript"/>
         </Helmet>
       )}
       <Container>
