@@ -3,7 +3,7 @@ module.exports = {
   siteTitleAlt: 'Get some Total Raddness', // This allows an alternative site title for SEO schema.
   publisher: 'Trippe', // Organization name used for SEO schema
   siteDescription:
-    'You'll know it when you see it.',
+    'You will know it when you see it.',
   siteUrl: 'https://totalraddness.netlify.com', // Site domain. Do not include a trailing slash! If you wish to use a path prefix you can read more about that here: https://www.gatsbyjs.org/docs/path-prefix/
   postsPerHomePage: 7, // Number of posts shown on the 1st page of of the index.js template (home page)
   postsPerPage: 6, // Number of posts shown on paginated pages
