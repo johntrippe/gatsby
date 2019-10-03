@@ -14,7 +14,8 @@ const PageTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <Helmet <script src="https://cdn.embedly.com/widgets/platform.js" type="text/javascript"/>>
+      <Helmet>
+        <script src="https://cdn.embedly.com/widgets/platform.js" type="text/javascript"/>
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO pagePath={slug} postNode={postNode} pageSEO />
