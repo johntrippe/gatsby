@@ -15,7 +15,6 @@ const PageTemplate = ({ data }) => {
   return (
     <Layout>
       <Helmet>
-	    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO pagePath={slug} postNode={postNode} pageSEO />
@@ -23,6 +22,18 @@ const PageTemplate = ({ data }) => {
       <Container>
         <PageTitle>{title}</PageTitle>
         <PageBody body={body} />
+        <script>
+  (function(w, d){
+   var id='embedly-platform', n = 'script';
+   if (!d.getElementById(id)){
+     w.embedly = w.embedly || function() {(w.embedly.q = w.embedly.q || []).push(arguments);};
+     var e = d.createElement(n); e.id = id; e.async=1;
+     e.src = ('https:' === document.location.protocol ? 'https' : 'http') + '://cdn.embedly.com/widgets/platform.js';
+     var s = d.getElementsByTagName(n)[0];
+     s.parentNode.insertBefore(e, s);
+   }
+  })(window, document);
+</script>
       </Container>
     </Layout>
   )
