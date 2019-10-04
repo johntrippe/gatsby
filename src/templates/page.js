@@ -22,7 +22,6 @@ const PageTemplate = ({ data }) => {
       <Container>
         <PageTitle>{title}</PageTitle>
         <PageBody body={body} />
-        <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
       </Container>
     </Layout>
   )

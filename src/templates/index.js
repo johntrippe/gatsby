@@ -20,7 +20,6 @@ const Index = ({ data, pageContext }) => {
       <SEO />
       {!isFirstPage && (
         <Helmet>
-		  <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
           <title>{`${config.siteTitle} - Page ${currentPage}`}</title>
         </Helmet>
       )}
