@@ -13,7 +13,7 @@ const Template = ({ children }) => {
     <div className="siteRoot">
       <Helmet>
       	<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
-        <title>Master {config.siteTitle}</title>
+        <title>{config.siteTitle}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href={favicon} />
