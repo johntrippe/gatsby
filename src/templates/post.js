@@ -82,7 +82,10 @@ export const query = graphql`
           excerpt(pruneLength: 320)
         }
       }
-      content { 
+      content {
+        title
+        id
+        slug
       }
     }
   }
