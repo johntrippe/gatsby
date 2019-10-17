@@ -82,6 +82,13 @@ export const query = graphql`
           excerpt(pruneLength: 320)
         }
       }
+      content {
+        childMarkdownRemark {
+          timeToRead
+          html
+          excerpt(pruneLength: 320)
+        }
+      }
     }
   }
 `
