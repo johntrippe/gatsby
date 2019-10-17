@@ -48,6 +48,17 @@ const PostTemplate = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
+query {
+  allContentfulBlogPost {
+    edges {
+      node {
+        bodyRichText {
+          json
+        }
+      }
+    }
+  }
+}
   query($slug: String!) {
     contentfulPost(slug: { eq: $slug }) {
       title
@@ -82,9 +93,6 @@ export const query = graphql`
           excerpt(pruneLength: 320)
         }
       }
-      content {
-          json 
-        }
     }
   }
 `
