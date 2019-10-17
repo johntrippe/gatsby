@@ -40,7 +40,7 @@ const PostTemplate = ({ data, pageContext }) => {
           date={publishDate}
           timeToRead={body.childMarkdownRemark.timeToRead}
         />
-        <PageBody body={content} />
+        <PageBody body={body} />
       </Container>
       <PostLinks previous={previous} next={next} />
     </Layout>
@@ -48,17 +48,6 @@ const PostTemplate = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-query {
-  allContentfulBlogPost {
-    edges {
-      node {
-        bodyRichText {
-          json
-        }
-      }
-    }
-  }
-}
   query($slug: String!) {
     contentfulPost(slug: { eq: $slug }) {
       title
