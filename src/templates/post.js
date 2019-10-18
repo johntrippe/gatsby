@@ -40,7 +40,7 @@ const PostTemplate = ({ data, pageContext }) => {
           date={publishDate}
           timeToRead={body.childMarkdownRemark.timeToRead}
         />
-        <PageBody body={body} />
+        <PageBody body={content} />
       </Container>
       <PostLinks previous={previous} next={next} />
     </Layout>
@@ -57,6 +57,7 @@ export const query = graphql`
           content
         }
       }
+      content
       publishDate(formatString: "MMMM DD, YYYY")
       publishDateISO: publishDate(formatString: "YYYY-MM-DD")
       tags {
