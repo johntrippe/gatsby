@@ -51,6 +51,13 @@ export const query = graphql`
   query($slug: String!) {
     contentfulPost(slug: { eq: $slug }) {
       title
+      edges {
+      node {
+        bodyRichText {
+          json
+        }
+      }
+    }
       slug
       metaDescription {
         internal {
