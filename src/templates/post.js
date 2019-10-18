@@ -57,8 +57,6 @@ export const query = graphql`
           content
         }
       }
-      content {
-	  }
       publishDate(formatString: "MMMM DD, YYYY")
       publishDateISO: publishDate(formatString: "YYYY-MM-DD")
       tags {
@@ -77,7 +75,7 @@ export const query = graphql`
           height
         }
       }
-      body {
+      content {
         childMarkdownRemark {
           timeToRead
           html
