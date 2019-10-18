@@ -40,7 +40,7 @@ const PostTemplate = ({ data, pageContext }) => {
           date={publishDate}
           timeToRead={body.childMarkdownRemark.timeToRead}
         />
-        <PageBody body={content} />
+        <PageBody body={body} />
       </Container>
       <PostLinks previous={previous} next={next} />
     </Layout>
@@ -75,13 +75,13 @@ export const query = graphql`
           height
         }
       }
-      edges {
-      node {
-        content {
-          json
+      body {
+        childMarkdownRemark {
+          timeToRead
+          html
+          excerpt(pruneLength: 320)
         }
       }
-    }
     }
   }
 `
