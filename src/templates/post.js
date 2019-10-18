@@ -75,9 +75,13 @@ export const query = graphql`
           height
         }
       }
-      content {
-        jason
+      edges {
+      node {
+        content {
+          json
+        }
       }
+    }
     }
   }
 `
